@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="TAz-FC-gFV">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="webview" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z2w-mK-MCw">
+                                <rect key="frame" x="-4" y="4" width="328" height="564"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="0Um-2W-e8J">
+                                <rect key="frame" x="142" y="265" width="37" height="37"/>
+                                <color key="tintColor" red="1" green="0.69818407739999999" blue="0.1303270336" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="color" red="1" green="0.287674445" blue="0.34311483840000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="z2w-mK-MCw" secondAttribute="bottom" id="0Zl-qZ-lIf"/>
+                            <constraint firstItem="0Um-2W-e8J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6cs-Vc-cru"/>
+                            <constraint firstItem="0Um-2W-e8J" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OM9-yD-xfe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="z2w-mK-MCw" secondAttribute="trailing" constant="-20" id="fV5-fU-Wnr"/>
+                            <constraint firstItem="z2w-mK-MCw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-60" id="p4p-sa-bo8"/>
+                            <constraint firstItem="z2w-mK-MCw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="vmQ-Vh-dfY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UND-Ia-ciu">
+                        <barButtonItem key="leftBarButtonItem" title="Voltar" id="zXQ-VN-MlI">
+                            <connections>
+                                <action selector="Voltrar:" destination="BYZ-38-t0r" id="yEY-Nu-t67"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Atualizar" id="0Q8-7b-sR0">
+                            <connections>
+                                <action selector="Atualizar:" destination="BYZ-38-t0r" id="aXX-SF-hoe"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ActivityIndicator" destination="0Um-2W-e8J" id="g21-6f-23W"/>
+                        <outlet property="webView" destination="z2w-mK-MCw" id="pXt-2z-Bwl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681" y="293"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="j0L-w9-AOt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TAz-FC-gFV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fbP-3N-Sz5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="UtH-SN-181"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C0P-7q-DPc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149" y="293"/>
+        </scene>
+    </scenes>
+</document>
